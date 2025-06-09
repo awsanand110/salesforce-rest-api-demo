@@ -7,8 +7,6 @@ from services.api_service import SalesforceAPIClient
 auth_service = SalesforceAuthService()  # which wil help me in authenticating with Salesforce
 api_service = SalesforceAPIClient(auth_service)  # wil help me in sending requests to Salesforce API
 
-print(api_service)
-
 load_dotenv()
 
 app = Flask(__name__)
