@@ -16,8 +16,6 @@ app = Flask(__name__)
 @app.route('/leads', methods=['POST'])
 def create_lead():
     data = request.json
-    print("Pradeepa detail from api request body")
-    print(data)
     if not data:
         return jsonify({"error": "No data provided"}), 400
     response = api_service.request(
